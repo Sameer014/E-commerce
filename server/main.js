@@ -1,4 +1,5 @@
 import colors from 'colors';
+import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv';
 import express from 'express';
 import morgan from 'morgan';
@@ -16,6 +17,7 @@ connectDB();
 
 const app = express();
 app.use(express.json());
+app.use(cookieParser());
 
 app.use(morgan('dev'));
 
